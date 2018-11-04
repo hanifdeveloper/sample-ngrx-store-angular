@@ -1,5 +1,8 @@
 <p>
   study-index works!
-  <span *ngIf="status">true</span>
-  <button mat-button>Material Button</button>
 </p> 
+<h2>You are in study index</h2>
+<ul>
+  <li><a [routerLink]="['add']">add study</a></li>
+  <li><a [routerLink]="['edit']">edit study</a></li>
+</ul>

@@ -1,0 +1,26 @@
+<form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="nisn">NISN</label>
+    <div class="form-control">
+      <input type="text" formControlName="nisn">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="name">NAME</label>
+    <div class="form-control">
+      <input type="text" formControlName="name">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="study">STUDY</label>
+    <div class="form-control">
+      <input type="text" formControlName="study">
+    </div>
+  </div>
+  <br>
+  <button type="submit">Simpan</button>
+</form>
+<br/>
+<a [routerLink]="['/student']">student</a><br/>
+<a [routerLink]="['/']">Home</a>
+

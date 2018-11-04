@@ -11,7 +11,8 @@ import { HomeComponent } from './../core/home/home.component';
   ],
   exports: [
     AppRoutingModule,
-    HeaderComponent
+    HeaderComponent,
+    HomeComponent
   ],
   declarations: [HeaderComponent, HomeComponent]
 })

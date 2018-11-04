@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StudyService } from './../study.service';
 
 @Component({
   selector: 'app-study-index',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StudyIndexComponent implements OnInit {
   status = true;
-  constructor() { }
+  constructor(
+    private studyService: StudyService
+  ) { }
 
   ngOnInit() {
+    const data = this.studyService.test();
+    console.log(data)
   }
 
 }
