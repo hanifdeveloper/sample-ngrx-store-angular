@@ -1,0 +1,21 @@
+<form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
+  <div formArrayName="students"
+    *ngFor="let student of studentForm.get('students').controls; let i = index">
+    <div [formGroupName]="i">
+      <label for="nisn">NISN</label> &nbsp;<input type="text" formControlName="nisn">
+      &nbsp;
+      <label for="name">NAME</label>&nbsp;<input type="text" formControlName="name">
+      &nbsp;
+      <label for="study">STUDY</label>&nbsp;<input type="text" formControlName="study">
+    </div>
+    <br>
+  </div>
+  <br/>
+  <br/>
+  <button type="button" (click)="onAddStudent()">Tambah</button>&nbsp;
+  <button type="submit">Simpan</button>
+</form>
+<br/>
+<a [routerLink]="['/student']">student</a><br/>
+<a [routerLink]="['/']">Home</a>
+

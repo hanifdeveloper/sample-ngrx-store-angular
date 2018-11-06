@@ -1,5 +1,3 @@
-export interface Student {
-    nisn: string;
-    name: string;
-    study: string;
+export class Student {
+    constructor(public nisn: string, public name: string, public study: string) {}
 }

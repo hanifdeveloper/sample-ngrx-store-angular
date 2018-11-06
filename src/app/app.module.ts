@@ -5,6 +5,9 @@ import { AppComponent } from './app.component';
 import { AuthModule } from './auth/auth.module';
 import { CoreModule } from './core/core.module';
 import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
+import { StoreModule } from '@ngrx/store';
+import { studentReducer } from './store/reducer/student.reducer';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,9 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     AuthModule,
     CoreModule,
-    HttpClientModule
+    HttpClientModule,
+    HttpModule,
+    StoreModule.forRoot({ studentList: studentReducer })
   ],
   providers: [],
   bootstrap: [AppComponent]

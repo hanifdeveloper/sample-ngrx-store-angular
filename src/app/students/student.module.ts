@@ -5,6 +5,7 @@ import { StudentIndexComponent } from './student-index/student-index.component';
 import { StudentAddComponent } from './student-add/student-add.component';
 import { StudentEditComponent } from './student-edit/student-edit.component';
 import { Routes, RouterModule } from '@angular/router';
+import { DinamisAddComponent } from './dinamis-add/dinamis-add.component';
 
 const routes: Routes = [
   {
@@ -15,6 +16,9 @@ const routes: Routes = [
   },
   {
     path: 'edit', component: StudentEditComponent
+  },
+  {
+    path: 'dinamis', component: DinamisAddComponent
   }
 ];
 
@@ -24,6 +28,6 @@ const routes: Routes = [
     SharedModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [StudentIndexComponent, StudentAddComponent, StudentEditComponent]
+  declarations: [StudentIndexComponent, StudentAddComponent, StudentEditComponent, DinamisAddComponent]
 })
 export class StudentModule { }
