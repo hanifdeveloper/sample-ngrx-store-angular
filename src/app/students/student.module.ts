@@ -15,7 +15,7 @@ const routes: Routes = [
     path: 'add', component: StudentAddComponent
   },
   {
-    path: 'edit', component: StudentEditComponent
+    path: 'edit/:id', component: StudentEditComponent
   },
   {
     path: 'dinamis', component: DinamisAddComponent

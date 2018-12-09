@@ -1,4 +1,20 @@
-<h2>You are in student index</h2>
+<table>
+  <tr>
+    <th>nisn</th>
+    <th>name</th>
+    <th>study</th>
+    <th>delete</th>
+    <th>edit</th>
+  </tr>
+  <tr *ngFor="let student of students; let i = index">
+    <td>{{ student.nisn }}</td>
+    <td>{{ student.name }}</td>
+    <td>{{ student.study }}</td>
+    <td><button type="button" (click)="destroy(i)">delete</button></td>
+    <td><button type="button" (click)="edit(i)">edit</button></td>
+
+  </tr>
+</table>
 <ul>
   <li><a [routerLink]="['add']">add student</a></li>
   <li><a [routerLink]="['dinamis']">dinamis add student</a></li>

@@ -3,6 +3,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 import { Store } from '@ngrx/store';
 import { Student } from '../../interface/student';
 import * as StudentAction from './../../store/actions/student.action';
+import { StudentService } from './../student.service';
 
 @Component({
   selector: 'app-student-add',
@@ -13,7 +14,8 @@ export class StudentAddComponent implements OnInit {
   studentForm: FormGroup;
   constructor(
     private store: Store<{studentList:
-      {students: Student[]}}>
+      {students: Student[]}}>,
+    private studentService: StudentService
   ) { }
 
   ngOnInit() {
@@ -31,10 +33,11 @@ export class StudentAddComponent implements OnInit {
   onSubmit() {
     // tslint:disable-next-line:no-unused-expression
     const newStudent = new Student(this.studentForm.value.nisn, this.studentForm.value.name, this.studentForm.value.study);
-    console.log(newStudent);
+    this.studentService.userData.next(newStudent);
+    // console.log(newStudent);
     // TODO: Use EventEmitter with form value
-    console.log(this.studentForm);
-    this.store.dispatch(new StudentAction.AddStudent(newStudent));
+    // console.log(this.studentForm);
+    // this.store.dispatch(new StudentAction.AddStudent(newStudent));
   }
 
 }

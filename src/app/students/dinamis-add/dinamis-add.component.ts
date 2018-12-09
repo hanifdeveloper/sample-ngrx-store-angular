@@ -43,6 +43,7 @@ export class DinamisAddComponent implements OnInit {
   onAddStudent(): void {
     this.students = this.studentForm.get('students') as FormArray;
     this.students.push(this.buildFormStudent());
+    console.log(this.students);
   }
 
   onSubmit() {
